@@ -4,8 +4,13 @@
   "description": "Учебный репозиторий для задания курса RS School Fullstack Engineering.",
   "main": "app.js",
   "lint-staged": {
-    "*.js": "eslint",
-    "*.{js,html,css}": "prettier --check"
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{html,css}": [
+      "prettier --write"
+    ]
   },
   "scripts": {
     "lint": "eslint .",
